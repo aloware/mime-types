@@ -1,5 +1,5 @@
 {
-    "name": "aloware/forked-mime-types",
+    "name": "magyarjeti/mime-types",
     "description": "A converter between mime types and file extensions.",
     "type": "library",
     "license": "MIT",
