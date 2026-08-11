@@ -5,6 +5,7 @@ namespace Magyarjeti\MimeTypes;
 use RuntimeException;
 use SplFileObject;
 use IteratorAggregate;
+use Traversable;
 
 class FileReader implements IteratorAggregate
 {
@@ -53,9 +54,9 @@ class FileReader implements IteratorAggregate
     /**
      * Iterate over lines.
      *
-     * @return FileLine
+     * @return Traversable<FileLine>
      */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         while ($this->hasMore()) {
             yield $this->readLine();
