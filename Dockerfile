@@ -1,8 +1,6 @@
-FROM php:7-alpine
+FROM php:8.5-cli-alpine
 
 RUN curl -Ls https://getcomposer.org/composer.phar > /usr/local/bin/composer && \
-    curl -Ls https://phar.phpunit.de/phpunit.phar > /usr/local/bin/phpunit && \
-    curl -Ls http://apigen.org/apigen.phar > /usr/local/bin/apigen && \
-    chmod +x /usr/local/bin/composer /usr/local/bin/phpunit /usr/local/bin/apigen
+    chmod +x /usr/local/bin/composer
 
 CMD ["/bin/sh"]
