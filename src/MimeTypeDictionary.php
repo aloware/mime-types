@@ -3,6 +3,7 @@
 namespace Magyarjeti\MimeTypes;
 
 use IteratorAggregate;
+use Traversable;
 
 class MimeTypeDictionary implements IteratorAggregate
 {
@@ -24,9 +25,9 @@ class MimeTypeDictionary implements IteratorAggregate
     /**
      * Get the mime type definitions.
      *
-     * @return MimeType
+     * @return Traversable<MimeType>
      */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         foreach ($this->reader as $line) {
             if ($this->isComment($line)) {

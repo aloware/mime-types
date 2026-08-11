@@ -1,12 +1,13 @@
 <?php
 
 use Magyarjeti\MimeTypes\MimeTypeConverter;
+use PHPUnit\Framework\TestCase;
 
-class MimeTypeConverterTest extends PHPUnit_Framework_TestCase
+class MimeTypeConverterTest extends TestCase
 {
     protected $converter;
 
-    public function setUp()
+    protected function setUp(): void
     {
         $this->converter = new MimeTypeConverter;
     }
